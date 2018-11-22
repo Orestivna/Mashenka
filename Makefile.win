@@ -1,0 +1,51 @@
+# Project: question
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = question_private.res
+OBJ  = form.o game.o gdiobj.o in_out.o main.o menu.o util.o $(RES)
+LINKOBJ  = form.o game.o gdiobj.o in_out.o main.o menu.o util.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows C:/Dev-Cpp/lib/libwinmm.a   -lgmon -pg  -g3 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = question.exe
+CXXFLAGS = $(CXXINCS)   -pg -g3
+CFLAGS = $(INCS)   -pg -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before question.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "question.exe" $(LIBS)
+
+form.o: form.cpp
+	$(CPP) -c form.cpp -o form.o $(CXXFLAGS)
+
+game.o: game.cpp
+	$(CPP) -c game.cpp -o game.o $(CXXFLAGS)
+
+gdiobj.o: gdiobj.cpp
+	$(CPP) -c gdiobj.cpp -o gdiobj.o $(CXXFLAGS)
+
+in_out.o: in_out.cpp
+	$(CPP) -c in_out.cpp -o in_out.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+util.o: util.cpp
+	$(CPP) -c util.cpp -o util.o $(CXXFLAGS)
+
+question_private.res: question_private.rc Script.rc 
+	$(WINDRES) -i question_private.rc --input-format=rc -o question_private.res -O coff 

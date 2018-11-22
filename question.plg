@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: question - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/Script.res" /d "NDEBUG" "D:\question\Script.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMIN~1.MIC\LOCALS~1\Temp\RSP195.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/question.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\question\form.cpp"
+"D:\question\game.cpp"
+"D:\question\gdiobj.cpp"
+"D:\question\in_out.cpp"
+"D:\question\main.cpp"
+"D:\question\menu.cpp"
+"D:\question\util.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMIN~1.MIC\LOCALS~1\Temp\RSP195.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMIN~1.MIC\LOCALS~1\Temp\RSP196.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/question.pdb" /machine:I386 /out:"Release/question.exe" 
+.\Release\form.obj
+.\Release\game.obj
+.\Release\gdiobj.obj
+.\Release\in_out.obj
+.\Release\main.obj
+.\Release\menu.obj
+.\Release\util.obj
+.\Release\Script.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMIN~1.MIC\LOCALS~1\Temp\RSP196.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+form.cpp
+game.cpp
+gdiobj.cpp
+in_out.cpp
+main.cpp
+menu.cpp
+util.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+question.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
